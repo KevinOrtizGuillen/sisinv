@@ -8,7 +8,6 @@ package vista;
 import control.cOperacion;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import modelo.mCliente;
 import modelo.mOperacion;
 
 /**
@@ -82,8 +81,8 @@ public class frmOperaciones extends javax.swing.JInternalFrame {
         // 0=yes, 1=no, 2=cancel
         inicializarObj();
         if (input==0) {
-            String mensaje=cope.EliminarOperacion(mope);
-            JOptionPane.showMessageDialog(null, mensaje);
+            String res=cope.EliminarOperacion(mope);
+            JOptionPane.showMessageDialog(null, res);
             inhabilitar();
         }else{
             inhabilitar();
